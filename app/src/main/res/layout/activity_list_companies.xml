@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:id="@+id/header_layout"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:background="@color/green_bg_header">
+        <TextView
+            android:id="@+id/txt_header"
+            android:layout_width="0dp"
+            android:layout_weight="3"
+            android:layout_height="match_parent"
+            android:textSize="20sp"
+            android:textColor="@color/header_text"
+            android:gravity="center"
+            android:text="@string/Company_Name" />
+
+        <ImageButton
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:src="@android:drawable/ic_menu_add"
+            android:layout_height="match_parent"
+            android:id="@+id/btn_add_company"
+            android:layout_margin="8dp"
+            android:background="@android:color/transparent"/>
+    </LinearLayout>
+    <TextView
+        android:id="@+id/empty_list_company"
+        android:text="@string/No_Company"
+        android:gravity="center"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+    <ListView
+        android:id="@+id/list_companies"
+        android:layout_below="@+id/header_layout"
+        android:layout_margin="4dp"
+        android:divider="@android:drawable/divider_horizontal_bright"
+        android:dividerHeight="0.5dp"
+        android:listSelector="@android:drawable/list_selector_background"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+</RelativeLayout>
