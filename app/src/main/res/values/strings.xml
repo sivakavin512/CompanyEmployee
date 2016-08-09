@@ -3,5 +3,7 @@
 
     <string name="Company_Name">All Company Names</string>
     <string name="No_Company">No Company is Created.Please Click plus(+) button to add Comapany</string>
+    <string name="No_Employee">No Empoyee is Created.Please Click plus(+) button to add Employee</string>
     <string name="title_comapany_lay">Add Company</string>
+    <string name="select_a_company">Select a Company</string>
 </resources>

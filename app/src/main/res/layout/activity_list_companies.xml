@@ -19,14 +19,15 @@
             android:text="@string/Company_Name" />
 
         <ImageButton
+            android:id="@+id/btn_add_company"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:src="@android:drawable/ic_menu_add"
             android:layout_height="match_parent"
-            android:id="@+id/btn_add_company"
             android:layout_margin="8dp"
             android:background="@android:color/transparent"/>
     </LinearLayout>
+
     <TextView
         android:id="@+id/empty_list_company"
         android:text="@string/No_Company"
@@ -39,6 +40,7 @@
         android:id="@+id/list_companies"
         android:layout_below="@+id/header_layout"
         android:layout_margin="4dp"
+        android:visibility="gone"
         android:divider="@android:drawable/divider_horizontal_bright"
         android:dividerHeight="0.5dp"
         android:listSelector="@android:drawable/list_selector_background"

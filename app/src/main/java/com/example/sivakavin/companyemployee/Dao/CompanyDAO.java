@@ -9,6 +9,9 @@ import android.util.Log;
 
 import com.example.sivakavin.companyemployee.Model.Company;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Created by sivakavin on 8/6/2016.
  */
@@ -71,5 +74,22 @@ public class CompanyDAO {
         company.setmWebsite(cursor.getString(3));
         company.setmPhoneNumber(cursor.getString(4));
         return company;
+    }
+
+    public List<Company> getAllCompanies() {
+        List<Company> listCompanies = new ArrayList<Company>();
+
+        Cursor cursor=mdb.query(dbHelper.TABLE_COMPANIES,mAllColumns,null,null,null,null,null);
+        if( cursor != null){
+            cursor.moveToFirst();
+            while (!cursor.isAfterLast()){
+                Company company=cursorToCompany(cursor);
+                listCompanies.add(company);
+                cursor.moveToNext();
+            }
+            //curson close
+            cursor.close();
+        }
+        return listCompanies;
     }
 }

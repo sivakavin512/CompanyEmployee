@@ -1,6 +1,7 @@
 package com.example.sivakavin.companyemployee.Activities;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextUtils;
@@ -33,8 +34,13 @@ public class AddCompanyActivity extends Activity implements View.OnClickListener
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_company);
         initViews();
+
+        //Fill the listview
         this.mCompanyDAO=new CompanyDAO(this);
+
     }
+
+
 
     private void initViews() {
         this.mTxtCompanyName = (EditText) findViewById(R.id.txt_company_name);
@@ -60,6 +66,12 @@ public class AddCompanyActivity extends Activity implements View.OnClickListener
                     Log.d(TAG, "added company : "+ createCompany.getmName());
 
                     message.ToastMessage(this,"Sucessfully Inserted");
+                    //result code
+                    Intent intent = new Intent();
+                    intent.putExtra(ListCompaniesActivity.EXTRA_ADDED_COMPANY,createCompany);
+                    setResult(RESULT_OK, intent);
+                    finish();
+
                 }else{
                     message.ToastMessage(this,"One or More Field are empty");
                 }

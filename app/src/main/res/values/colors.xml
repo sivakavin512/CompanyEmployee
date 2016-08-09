@@ -4,8 +4,10 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
 
-    <color name="green_bg_header">#28d676</color>
-    <color name="header_text">#17ac57</color>
+    <color name="green_bg_header">#ff8a31</color>
+    <color name="header_text">#843f0a</color>
     <color name="hint_color">#d7dcd9</color>
     <color name="bg_company">#e2e2e2</color>
+    <color name="bg_emp">#449ef2</color>
+    <color name="hint_list_text">#a9a930</color>
 </resources>
